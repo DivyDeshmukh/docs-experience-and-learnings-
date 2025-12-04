@@ -1,0 +1,33 @@
+FASTAPI vs EXPRESS vs NESTJS – QUICK COMPARISON FOR AI BACKENDS
+
+All three can build HTTP APIs, but the real difference is language, ecosystem, and built-in capabilities.
+
+FastAPI (Python):
+- Best suited when core AI/ML logic is in Python
+- Direct integration with PyTorch, TensorFlow, HuggingFace, LangChain, LlamaIndex, OpenAI SDKs
+- Async by default (ASGI)
+- Built-in request validation using Pydantic
+- Automatic OpenAPI / Swagger docs with zero setup
+- Ideal for model serving, RAG pipelines, embeddings, and inference APIs
+
+Express (Node.js):
+- Minimal, unopinionated framework
+- Everything is manual: validation, docs, structure
+- Great for lightweight APIs and microservices
+- Best when app is mostly orchestration of external services
+- Not ideal for hosting heavy ML logic directly
+
+NestJS (Node.js + TypeScript):
+- Structured, opinionated framework (like Spring/Angular)
+- Built-in modules, DI, validation, and Swagger support
+- Great for large, enterprise-grade APIs
+- Better choice than Express for complex Node backends
+- Still relies on external services for ML-heavy workloads
+
+Core Rule:
+- If your AI logic and models are in Python → use FastAPI
+- If your system is JS/TS-heavy and mostly calls external AI APIs → use NestJS or Express
+
+FastAPI = AI brain service  
+NestJS = enterprise API gateway / backend  
+Express = lightweight API layer
