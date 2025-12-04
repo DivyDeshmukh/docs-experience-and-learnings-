@@ -1,200 +1,216 @@
-BUILD PROCESS, LINTING, AND TOOLING – CORE NOTES
+# Build Process, Linting, and Tooling – Core Notes
 
-1. What Happens When You “Build” a Project
+---
+
+## 1. What Happens When You “Build” a Project
 
 When you run:
+
+```
 npm run build
 next build
 vite build
+```
+
 
 You are doing the following:
 
-Step-by-Step Behind the Scenes:
+### Step-by-Step Behind the Scenes
 
-1) TypeScript is checked  
-Ensures types are correct  
-No runtime code is generated yet, only validation  
+1. **TypeScript is checked**
+   - Ensures types are correct
+   - No runtime code is generated yet, only validation
 
-2) Linting may run  
-Checks code quality and rules  
-Finds unused variables, unsafe patterns, etc.  
+2. **Linting may run**
+   - Checks code quality and rules
+   - Finds unused variables, unsafe patterns, etc.
 
-3) Code is bundled  
-All imports are resolved  
-Files are merged into optimized bundles  
+3. **Code is bundled**
+   - All imports are resolved
+   - Files are merged into optimized bundles
 
-4) Tree shaking happens  
-Unused code is removed  
+4. **Tree shaking happens**
+   - Unused code is removed
 
-5) Minification happens  
-Variable names shortened  
-Spaces removed  
-Code compressed  
+5. **Minification happens**
+   - Variable names shortened
+   - Spaces removed
+   - Code compressed
 
-6) Environment variables are injected  
-process.env.X replaced with actual values  
+6. **Environment variables are injected**
+   - `process.env.X` replaced with actual values
 
-7) Static optimization  
-Static pages pre-rendered (Next.js)  
-Assets optimized  
+7. **Static optimization**
+   - Static pages pre-rendered (Next.js)
+   - Assets optimized
 
-8) Final output is created  
-Goes into:
-.next/ for Next.js  
-dist/ for Vite  
-build/ for CRA  
+8. **Final output is created**
+
+Output directories:
+- `.next/` for Next.js
+- `dist/` for Vite
+- `build/` for CRA
 
 This output is what you deploy to production.
 
---------------------------------------------------
+---
 
-2. What Is Linting
+## 2. What Is Linting
 
-Linting is static code analysis.
+Linting is **static code analysis**.
 
 It checks your code for:
-Logic mistakes  
-Unsafe patterns  
-Bad practices  
-Style issues  
-Unused variables  
-Missing dependencies in hooks  
-Wrong equality checks  
+- Logic mistakes
+- Unsafe patterns
+- Bad practices
+- Style issues
+- Unused variables
+- Missing dependencies in hooks
+- Wrong equality checks
 
 It happens:
-At build time  
-In your editor while typing  
-In CI pipelines  
+- At build time
+- In your editor while typing
+- In CI pipelines
 
 Linting:
-Does not run your code  
-Only analyzes it  
+- Does not run your code
+- Only analyzes it
 
---------------------------------------------------
+---
 
-3. What Is ESLint
+## 3. What Is ESLint
 
 ESLint is the tool that performs linting in JavaScript and TypeScript projects.
 
 It:
-Scans your files  
-Applies rule sets  
-Shows warnings and errors  
+- Scans your files
+- Applies rule sets
+- Shows warnings and errors
 
 Example ESLint warning:
-'data' is assigned a value but never used  
 
---------------------------------------------------
+```
+'data' is assigned a value but never used
+```
 
-4. Common ESLint Rule Categories
 
-no-unused-vars  
-no-console  
-react-hooks/exhaustive-deps  
-eqeqeq  
-no-undef  
-prefer-const  
+---
 
---------------------------------------------------
+## 4. Common ESLint Rule Categories
 
-5. What Is Prettier (Related But Different)
+- `no-unused-vars`
+- `no-console`
+- `react-hooks/exhaustive-deps`
+- `eqeqeq`
+- `no-undef`
+- `prefer-const`
 
-Prettier is a code formatter, not a linter.
+---
+
+## 5. What Is Prettier (Related But Different)
+
+Prettier is a **code formatter**, not a linter.
 
 It:
-Formats your code automatically  
+- Formats your code automatically
 
 Handles:
-Indentation  
-Quotes  
-Line width  
-Semicolons  
+- Indentation
+- Quotes
+- Line width
+- Semicolons
 
-Does NOT detect logic problems  
+It does **NOT** detect logic problems.
 
 Best practice:
-ESLint for correctness  
-Prettier for formatting  
+- ESLint for correctness
+- Prettier for formatting
 
---------------------------------------------------
+---
 
-6. What Is Type Checking (TypeScript)
+## 6. What Is Type Checking (TypeScript)
 
 Type checking:
-Ensures function args, return types, and variables match expected types  
-Prevents runtime crashes  
+- Ensures function arguments, return types, and variables match expected types
+- Prevents runtime crashes
 
 Happens during build or via:
-tsc --noEmit  
 
---------------------------------------------------
+```
+tsc --noEmit
+```
 
-7. What Is Tree Shaking
+
+---
+
+## 7. What Is Tree Shaking
 
 Tree shaking removes:
-Unused exports  
-Dead code  
+- Unused exports
+- Dead code
 
 From your final bundle.
 
 Result:
-Smaller JS files  
-Faster load times  
+- Smaller JavaScript files
+- Faster load times
 
---------------------------------------------------
+---
 
-8. What Is Minification
+## 8. What Is Minification
 
 Minification:
-Shortens variable names  
-Removes whitespace and comments  
-Compresses code  
+- Shortens variable names
+- Removes whitespace and comments
+- Compresses code
 
 Before:
+
+```js
 function add(a, b) {
   return a + b;
 }
+```
 
 After:
 function a(n,e){return n+e}
 
---------------------------------------------------
-
-9. What Is Bundling
+## 9. What Is Bundling
 
 Bundling combines:
-Your JS files  
-Dependencies  
-CSS imports  
+- Your JavaScript files  
+- Dependencies  
+- CSS imports  
 
 Into:
-One or more optimized production files  
+- One or more optimized production files  
 
-Tools that bundle:
-Webpack  
-Turbopack  
-Vite (Rollup)  
-ESBuild  
+**Tools that bundle:**
+- Webpack  
+- Turbopack  
+- Vite (Rollup)  
+- ESBuild  
 
---------------------------------------------------
+---
 
-10. What Is Source Map
+## 10. What Is Source Map
 
 Source maps:
-Map minified code back to original code  
-Allow debugging production errors in readable form  
-Usually disabled or external in production  
+- Map minified code back to original code  
+- Allow debugging production errors in readable form  
+- Usually disabled or external in production  
 
---------------------------------------------------
+---
 
-11. Quick Term Cheat Sheet
+## 11. Quick Term Cheat Sheet
 
-Build – Preparing production-ready optimized files  
-Linting – Checking code quality without running it  
-ESLint – Tool that performs linting  
-Prettier – Tool that formats code  
-Tree Shaking – Removing unused code  
-Minification – Compressing code  
-Bundler – Tool that merges and optimizes files  
-Source Map – Debug bridge between minified and original code  
-dist / build / .next – Output folders for production
+- **Build** – Preparing production-ready optimized files  
+- **Linting** – Checking code quality without running it  
+- **ESLint** – Tool that performs linting  
+- **Prettier** – Tool that formats code  
+- **Tree Shaking** – Removing unused code  
+- **Minification** – Compressing code  
+- **Bundler** – Tool that merges and optimizes files  
+- **Source Map** – Debug bridge between minified and original code  
+- **dist / build / .next** – Output folders for production  
