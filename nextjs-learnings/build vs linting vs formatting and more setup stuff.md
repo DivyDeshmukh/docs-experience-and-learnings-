@@ -1,3 +1,5 @@
+BUILD PROCESS, LINTING, AND TOOLING – CORE NOTES
+
 1. What Happens When You “Build” a Project
 
 When you run:
@@ -5,9 +7,9 @@ npm run build
 next build
 vite build
 
-You are doing this:
+You are doing the following:
 
-Step-by-Step Behind the Scenes
+Step-by-Step Behind the Scenes:
 
 1) TypeScript is checked  
 Ensures types are correct  
