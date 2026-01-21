@@ -1,12 +1,3 @@
-Absolutely — you’re **on the right track**, and I’ll clarify it in a *clean, conceptual way* so you can put it directly in your notes. I’ll explain:
-
-1. What tRPC replaces in a typical REST setup
-2. How tRPC achieves type safety
-3. How this works in **NestJS backend + Next.js frontend**
-4. Why this is useful in real applications
-
----
-
 ## 1. Traditional REST API Model (for comparison)
 
 In a normal REST backend:
@@ -330,7 +321,3 @@ Router with typed procedures
 * tRPC can be mounted inside NestJS or inside Next.js API routes
 * Shared types between FE and BE allow true type safety
 * Zod handles validation and type derivation
-
----
-
-If you want, I can produce **diagrammatic notes** (ASCII/Markdown diagrams showing flow paths), or even a **starter template structure** for your NestJS + Next.js + tRPC + Zod architecture.
