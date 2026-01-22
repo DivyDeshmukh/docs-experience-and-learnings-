@@ -321,3 +321,19 @@ Router with typed procedures
 * tRPC can be mounted inside NestJS or inside Next.js API routes
 * Shared types between FE and BE allow true type safety
 * Zod handles validation and type derivation
+
+Frontend (Next.js)
+     ↓
+tRPC Client Method Call
+     ↓
+Network Request over HTTP
+     ↓
+Backend HTTP Server (NestJS or tRPC handler)
+     ↓
+tRPC Handler Receives & Executes Procedure
+     ↓
+Procedure Runs Business Logic
+     ↓
+Response Sent Back
+     ↓
+Frontend Receives Typed Result
