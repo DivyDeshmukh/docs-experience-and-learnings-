@@ -707,5 +707,5 @@ If refresh fails (refreshToken expired):
    ├─ Rate limiting
    └─ Brute force protection
 ```
-**Clerk** is a full authentication and user management platform that simplifies adding secure login and session handling to your app, supporting classic email/password and optional verification flows. :contentReference[oaicite:0]{index=0}  
-It also supports **OAuth/social logins** (e.g., Google, GitHub), letting users sign in with existing provider accounts while Clerk manages sessions and profiles for you. :contentReference[oaicite:1]{index=1}
+**Clerk** is a full authentication and user management platform that simplifies adding secure login and session handling to your app, supporting classic email/password and optional verification flows.
+It also supports **OAuth/social logins** (e.g., Google, GitHub), letting users sign in with existing provider accounts while Clerk manages sessions and profiles for you.
