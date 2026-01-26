@@ -1,5 +1,3 @@
----
-
 # **1. The Big Picture: Application → ORM/ODM → Driver → Database**
 
 At runtime your app code *never talks to the database directly*.   Instead:
@@ -25,8 +23,6 @@ Your Code
 ```
 
 Everything between your code and the database is a *translation and communication pipeline*.
-
----
 
 ## **2. How SQL Databases Work (Relational: PostgreSQL)**
 
