@@ -1,4 +1,3 @@
----
 
 # 1. `useTransition` (React 18+)
 
@@ -13,10 +12,8 @@ Typical use:
 * Async UI updates
 * Preventing UI freezing
 
----
-
 ## Basic example
-
+---
 ```tsx
 "use client";
 import { useState, useTransition } from "react";
@@ -50,9 +47,7 @@ export default function Search() {
   );
 }
 ```
-
 ---
-
 ## What happens internally
 
 Without `useTransition`:
