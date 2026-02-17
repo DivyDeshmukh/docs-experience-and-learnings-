@@ -147,3 +147,6 @@ Without MMU, execution-time binding isn’t possible.
 ## One-Line Summary
 
 Address binding maps program-generated logical addresses to actual physical memory locations, ensuring flexible, safe, and efficient memory usage during program execution.
+
+
+<img width="1033" height="749" alt="image" src="https://github.com/user-attachments/assets/633ef212-e70c-44b8-abe1-ddee133e3aac" />
