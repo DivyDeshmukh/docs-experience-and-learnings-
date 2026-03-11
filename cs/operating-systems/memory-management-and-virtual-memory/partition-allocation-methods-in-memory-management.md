@@ -1,4 +1,3 @@
-```md
 # Partition Allocation Methods in Memory Management
 
 Memory management techniques are methods used by an operating system to allocate, control, and release main memory during program execution. They ensure that multiple processes can use memory efficiently without interfering with each other. Proper memory management improves system performance and prevents memory wastage.
