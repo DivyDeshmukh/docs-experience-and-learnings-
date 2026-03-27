@@ -1,6 +1,4 @@
-Divy, this is a big question and I want to answer it properly — not with a listicle, but with actual mental models that shape how successful founders think. Let me break it down the way I'd explain it to someone starting from zero.
-
----
+# The Founding Stack (Enterpreneurship basics)
 
 ## The one thing most people get wrong about entrepreneurship
 
