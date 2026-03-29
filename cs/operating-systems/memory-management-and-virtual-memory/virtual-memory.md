@@ -28,9 +28,9 @@ When a program runs, it uses virtual addresses (not real memory locations).
 
 The computer system converts these virtual addresses into physical addresses (actual locations in RAM) while the program runs.
 
-## Types of Virtual Memory
+## Implementation Types of Virtual Memory
 
-In a computer, virtual memory is managed by the Memory Management Unit (MMU), which is often built into the CPU. The CPU generates virtual addresses that the MMU translates into physical addresses. There are two main types of virtual memory:
+In a computer, virtual memory is managed by the Memory Management Unit (MMU), which is often built into the CPU. The CPU generates virtual addresses that the MMU translates into physical addresses. There are two main implementation types of virtual memory:
 
 Paging
 
